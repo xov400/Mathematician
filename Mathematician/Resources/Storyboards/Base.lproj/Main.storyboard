@@ -59,8 +59,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xhL-KJ-sxs">
-                                <rect key="frame" x="20" y="240" width="374" height="486"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="240" width="374" height="476"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="fUS-pM-HwZ">
                                     <size key="itemSize" width="1" height="1"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -83,18 +83,17 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.56078431370000004" green="0.80000000000000004" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xhL-KJ-sxs" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="20a-sg-Wha"/>
                             <constraint firstItem="sb0-3x-MLU" firstAttribute="top" secondItem="qRA-Is-QzS" secondAttribute="top" constant="15" id="G3M-9W-Iym"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="FUR-dO-25m" secondAttribute="trailing" constant="20" id="GWg-Y1-vsX"/>
                             <constraint firstItem="h9b-La-Icm" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="NX2-a7-Mad"/>
-                            <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="sb0-3x-MLU" secondAttribute="trailing" constant="175" id="U58-sI-xXg"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="h9b-La-Icm" secondAttribute="trailing" constant="20" id="X0M-zg-V69"/>
                             <constraint firstItem="FUR-dO-25m" firstAttribute="top" secondItem="sb0-3x-MLU" secondAttribute="bottom" constant="10" id="YiD-Ka-v7b"/>
                             <constraint firstItem="xhL-KJ-sxs" firstAttribute="top" secondItem="h9b-La-Icm" secondAttribute="bottom" constant="10" id="c0a-yQ-kyl"/>
                             <constraint firstItem="h9b-La-Icm" firstAttribute="top" secondItem="FUR-dO-25m" secondAttribute="bottom" constant="10" id="ikg-N7-WAJ"/>
-                            <constraint firstItem="qRA-Is-QzS" firstAttribute="bottom" secondItem="xhL-KJ-sxs" secondAttribute="bottom" constant="10" id="kUm-ZL-DLC"/>
+                            <constraint firstItem="qRA-Is-QzS" firstAttribute="bottom" secondItem="xhL-KJ-sxs" secondAttribute="bottom" constant="20" id="kUm-ZL-DLC"/>
                             <constraint firstItem="FUR-dO-25m" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="l0G-Rv-TzW"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="xhL-KJ-sxs" secondAttribute="trailing" constant="20" id="orB-vZ-l0A"/>
                             <constraint firstItem="sb0-3x-MLU" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="vQl-82-RRO"/>
@@ -229,7 +228,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.56078431370000004" green="0.80000000000000004" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AyO-hd-RHq" firstAttribute="top" secondItem="2Cd-fz-v9X" secondAttribute="bottom" constant="8" id="0WW-tl-oAu"/>
                             <constraint firstItem="2Cd-fz-v9X" firstAttribute="leading" secondItem="OYs-EE-VLE" secondAttribute="leading" constant="20" id="1Kt-8K-M0P"/>
@@ -256,14 +255,12 @@
                             <constraint firstItem="T0e-7Q-5rm" firstAttribute="top" secondItem="eMF-1f-pcR" secondAttribute="bottom" constant="20" id="dRn-PW-h5U"/>
                             <constraint firstItem="HtI-Me-XFx" firstAttribute="leading" secondItem="OYs-EE-VLE" secondAttribute="leading" constant="20" id="ddB-77-Yfc"/>
                             <constraint firstItem="HtI-Me-XFx" firstAttribute="top" secondItem="2Cd-fz-v9X" secondAttribute="bottom" constant="8" id="k8i-y1-BQ0"/>
-                            <constraint firstItem="OYs-EE-VLE" firstAttribute="trailing" secondItem="dWD-iG-72R" secondAttribute="trailing" constant="217" id="lIN-eS-J4Y"/>
                             <constraint firstItem="MbW-QW-8ri" firstAttribute="top" secondItem="T0e-7Q-5rm" secondAttribute="bottom" constant="20" id="pJ7-Bb-aih"/>
                             <constraint firstItem="T0e-7Q-5rm" firstAttribute="leading" secondItem="OYs-EE-VLE" secondAttribute="leading" constant="20" id="pba-vL-2ox"/>
                             <constraint firstItem="eMF-1f-pcR" firstAttribute="top" secondItem="RjK-5F-sgl" secondAttribute="bottom" constant="20" id="pjU-Qz-nTA"/>
                             <constraint firstItem="OYs-EE-VLE" firstAttribute="trailing" secondItem="59a-Zu-icL" secondAttribute="trailing" constant="20" id="rCU-3N-W5r"/>
                             <constraint firstItem="RjK-5F-sgl" firstAttribute="leading" secondItem="OYs-EE-VLE" secondAttribute="leading" constant="20" id="rjv-sR-31f"/>
                             <constraint firstItem="jZE-mQ-46A" firstAttribute="leading" secondItem="eMF-1f-pcR" secondAttribute="trailing" constant="8" id="u2Y-Mw-RJ7"/>
-                            <constraint firstItem="OYs-EE-VLE" firstAttribute="trailing" secondItem="pm9-Wv-EUE" secondAttribute="trailing" constant="188" id="xKp-Qh-ONZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OYs-EE-VLE"/>
                     </view>

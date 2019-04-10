@@ -7,6 +7,10 @@ import UIKit
 
 final class GameViewController: UIViewController, UITextFieldDelegate {
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     @IBOutlet weak var exampleTextField: UITextField!
     @IBOutlet weak var userInputLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -111,6 +115,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.layer.cornerRadius = 10
             cell.layer.borderWidth = 2
             cell.layer.borderColor = UIColor.gray.cgColor
+            cell.backgroundColor = .white
             return cell
         } else {
             let identifire = NSStringFromClass(CollectionViewCell.self)
@@ -121,6 +126,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.layer.cornerRadius = 10
             cell.layer.borderWidth = 2
             cell.layer.borderColor = UIColor.gray.cgColor
+            cell.backgroundColor = .white
             return cell
         }
     }

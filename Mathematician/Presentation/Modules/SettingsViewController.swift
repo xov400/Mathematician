@@ -7,6 +7,10 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     @IBOutlet weak var numOfQuestionsLabel: UILabel!
     @IBOutlet weak var numOfRightAnswersLabel: UILabel!
     @IBOutlet weak var useAdditionSwitch: UISwitch!
