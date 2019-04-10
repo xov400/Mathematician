@@ -7,10 +7,6 @@ import UIKit
 
 final class GameViewController: UIViewController, UITextFieldDelegate {
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
     @IBOutlet weak var exampleTextField: UITextField!
     @IBOutlet weak var userInputLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
