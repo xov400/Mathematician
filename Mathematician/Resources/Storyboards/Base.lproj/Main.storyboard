@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-429" y="-42"/>
         </scene>
-        <!--Game View Controller-->
+        <!--Mathematician-->
         <scene sceneID="2Mf-qM-tou">
             <objects>
                 <viewController id="ams-IK-Ym3" customClass="GameViewController" customModule="Mathematician" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,35 +82,55 @@
                                     <outlet property="delegate" destination="ams-IK-Ym3" id="4a2-hf-T7t"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-EZ-kH5">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="L6p-cv-iYk"/>
+                                    <constraint firstAttribute="width" constant="100" id="uEv-uc-rj8"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redCross" translatesAutoresizingMaskIntoConstraints="NO" id="EMu-Go-m8G" userLabel="Wrong Answer Image View">
+                                <rect key="frame" x="157" y="94" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HE3-kH-myh"/>
+                                    <constraint firstAttribute="height" constant="100" id="UaV-mA-uRQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.56078431370000004" green="0.80000000000000004" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xhL-KJ-sxs" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="20a-sg-Wha"/>
+                            <constraint firstItem="qRA-Is-QzS" firstAttribute="centerX" secondItem="EMu-Go-m8G" secondAttribute="centerX" id="B1z-Kf-EHE"/>
                             <constraint firstItem="sb0-3x-MLU" firstAttribute="top" secondItem="qRA-Is-QzS" secondAttribute="top" constant="15" id="G3M-9W-Iym"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="FUR-dO-25m" secondAttribute="trailing" constant="20" id="GWg-Y1-vsX"/>
+                            <constraint firstItem="E9T-EZ-kH5" firstAttribute="top" secondItem="qRA-Is-QzS" secondAttribute="top" constant="30" id="Iy2-Mm-Szg"/>
                             <constraint firstItem="h9b-La-Icm" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="NX2-a7-Mad"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="h9b-La-Icm" secondAttribute="trailing" constant="20" id="X0M-zg-V69"/>
                             <constraint firstItem="FUR-dO-25m" firstAttribute="top" secondItem="sb0-3x-MLU" secondAttribute="bottom" constant="10" id="YiD-Ka-v7b"/>
+                            <constraint firstItem="E9T-EZ-kH5" firstAttribute="centerX" secondItem="qRA-Is-QzS" secondAttribute="centerX" id="aie-Xb-gCb"/>
                             <constraint firstItem="xhL-KJ-sxs" firstAttribute="top" secondItem="h9b-La-Icm" secondAttribute="bottom" constant="10" id="c0a-yQ-kyl"/>
                             <constraint firstItem="h9b-La-Icm" firstAttribute="top" secondItem="FUR-dO-25m" secondAttribute="bottom" constant="10" id="ikg-N7-WAJ"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="bottom" secondItem="xhL-KJ-sxs" secondAttribute="bottom" constant="20" id="kUm-ZL-DLC"/>
                             <constraint firstItem="FUR-dO-25m" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="l0G-Rv-TzW"/>
                             <constraint firstItem="qRA-Is-QzS" firstAttribute="trailing" secondItem="xhL-KJ-sxs" secondAttribute="trailing" constant="20" id="orB-vZ-l0A"/>
+                            <constraint firstItem="EMu-Go-m8G" firstAttribute="top" secondItem="qRA-Is-QzS" secondAttribute="top" constant="30" id="uWh-hT-Zed"/>
                             <constraint firstItem="sb0-3x-MLU" firstAttribute="leading" secondItem="qRA-Is-QzS" secondAttribute="leading" constant="20" id="vQl-82-RRO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qRA-Is-QzS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YC1-7q-4EV"/>
+                    <navigationItem key="navigationItem" title="Mathematician" id="YC1-7q-4EV"/>
                     <connections>
                         <outlet property="collectionView" destination="xhL-KJ-sxs" id="SCR-lf-0ZC"/>
                         <outlet property="exampleTextField" destination="FUR-dO-25m" id="DFf-YS-P5f"/>
+                        <outlet property="rightAnswerImageView" destination="E9T-EZ-kH5" id="Jn0-RD-BRH"/>
                         <outlet property="userInputLabel" destination="h9b-La-Icm" id="4GI-yk-sx9"/>
+                        <outlet property="wrongAnswerImageView" destination="EMu-Go-m8G" id="hYd-aJ-2qU"/>
                         <segue destination="nem-ru-vjb" kind="show" identifier="forSettingsViewController" id="3l8-ES-82t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fi4-Ko-XrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="-42"/>
+            <point key="canvasLocation" x="307.24637681159425" y="-42.391304347826093"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="2Sa-EI-6uX">
@@ -280,4 +300,7 @@
             <point key="canvasLocation" x="1055.072463768116" y="-42.391304347826093"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="redCross" width="167" height="165"/>
+    </resources>
 </document>

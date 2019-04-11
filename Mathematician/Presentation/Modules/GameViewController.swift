@@ -10,6 +10,8 @@ final class GameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var exampleTextField: UITextField!
     @IBOutlet weak var userInputLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var rightAnswerImageView: UIImageView!
+    @IBOutlet weak var wrongAnswerImageView: UIImageView!
 
     private let buttonsLabels: [String] = ["1", "2", "3", "OK", "4", "5", "6", "C", "7", "8", "9", "<-", "-", "0", "."]
     private var firstValue: Int = 0
@@ -19,6 +21,7 @@ final class GameViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         collectionView.register(CollectionViewCell.self,
                                 forCellWithReuseIdentifier: NSStringFromClass(CollectionViewCell.self))
         collectionView.register(CollectionViewSettingssCell.self,
@@ -65,25 +68,33 @@ final class GameViewController: UIViewController, UITextFieldDelegate {
 
     private func okButtonPressed() {
         programSettings.questions += 1
-        var unswerAlert: UIAlertController
+        var wrongUnswerAlert: UIAlertController
         if userInputLabel.text! == String(arithmiticAction()) {
             programSettings.rightAnswers += 1
-            unswerAlert = UIAlertController(title: "SUCCESSFUL",
-                                            message: "\(firstValue) \(action) \(secondValue) = \(userInputLabel.text!)",
-                                            preferredStyle: .alert)
-            unswerAlert.addAction(UIAlertAction(title: "OK",
-                                                style: .default,
-                                                handler: { _ in self.getNewExample() }))
+
+            self.rightAnswerImageView.animationImages = [UIImage(named: "greenCheck")!]
+            self.rightAnswerImageView.animationRepeatCount = 1
+            self.rightAnswerImageView.animationDuration = 1
+            self.rightAnswerImageView.startAnimating()
+
+            self.getNewExample()
         } else {
-            unswerAlert = UIAlertController(title: "WRONG",
-                                            message: "It is not \(userInputLabel.text!)",
-                                            preferredStyle: .alert)
-            unswerAlert.addAction(UIAlertAction(title: "Think", style: .default, handler: nil))
-            unswerAlert.addAction(UIAlertAction(title: "Reset",
-                                                style: .destructive,
-                                                handler: { _ in self.getNewExample() }))
+            wrongAnswerImageView.isHidden = false
+
+            wrongUnswerAlert = UIAlertController(title: "WRONG",
+                                                 message: "It is not \(userInputLabel.text!)",
+                                                preferredStyle: .alert)
+            wrongUnswerAlert.addAction(UIAlertAction(title: "Think", style: .default, handler: { _ in
+                self.wrongAnswerImageView.isHidden = true
+            }))
+            wrongUnswerAlert.addAction(UIAlertAction(title: "Reset", style: .destructive, handler: { _ in
+                self.wrongAnswerImageView.isHidden = true
+                self.getNewExample()
+            }))
+
+            self.present(wrongUnswerAlert, animated: true, completion: nil)
         }
-        self.present(unswerAlert, animated: true, completion: { self.userInputLabel.text = "0" })
+        userInputLabel.text = "0"
     }
 
     // MARK: - TextField controls
