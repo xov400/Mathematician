@@ -30,6 +30,13 @@ final class SettingsViewController: UIViewController {
         useDivisionSwitch.isOn = programSettings.useDivision
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let gameViewController = transitioningDelegate as? GameViewController {
+            gameViewController.programSettings = programSettings
+        }
+    }
+
     @IBAction func switchersChanged(_ sender: UISwitch) {
         if sender.restorationIdentifier == "addition",
             (useSubstractionSwitch.isOn || useMultiplicationSwitch.isOn || useDivisionSwitch.isOn) {

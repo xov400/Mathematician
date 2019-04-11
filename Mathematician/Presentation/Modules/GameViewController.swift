@@ -17,7 +17,9 @@ final class GameViewController: UIViewController, UITextFieldDelegate {
     private var firstValue: Int = 0
     private var secondValue: Int = 0
     private var action: Character = "+"
-    private var programSettings = ProgramSettings()
+
+    private var dependencies = Services
+    lazy var programSettings = dependencies.settingsService.programSettings
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,11 @@ final class GameViewController: UIViewController, UITextFieldDelegate {
         collectionView.register(CollectionViewSettingssCell.self,
                                 forCellWithReuseIdentifier: NSStringFromClass(CollectionViewSettingssCell.self))
         getNewExample()
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        dependencies.settingsService.programSettings = programSettings
     }
 
     private func getNewExample() {

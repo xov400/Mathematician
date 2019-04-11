@@ -5,9 +5,9 @@
 
 import Foundation
 
-final class ProgramSettings {
-    var rightAnswers = 0
-    var questions = 0
+final class ProgramSettings: Codable {
+    var rightAnswers: UInt = 0
+    var questions: UInt = 0
     var maxValue: UInt32 = 10
     var useAddition = true
     var useSubstraction = true

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0902BA225F156C003D7C8D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902B9225F156C003D7C8D /* Services.swift */; };
+		1F0902BD225F15E2003D7C8D /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902BC225F15E2003D7C8D /* SettingsService.swift */; };
+		1F0902BF225F1602003D7C8D /* SettingsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902BE225F1602003D7C8D /* SettingsServiceProtocol.swift */; };
 		1F23CF26213E409400CDDE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23CF25213E409400CDDE1F /* AppDelegate.swift */; };
 		1F23CF2B213E409400CDDE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F23CF29213E409400CDDE1F /* Main.storyboard */; };
 		1F23CF2D213E409800CDDE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F23CF2C213E409800CDDE1F /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0902B9225F156C003D7C8D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		1F0902BC225F15E2003D7C8D /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		1F0902BE225F1602003D7C8D /* SettingsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsServiceProtocol.swift; sourceTree = "<group>"; };
 		1F23CF22213E409400CDDE1F /* Mathematician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathematician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F23CF25213E409400CDDE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F23CF2A213E409400CDDE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F0902BB225F156F003D7C8D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1F0902BE225F1602003D7C8D /* SettingsServiceProtocol.swift */,
+				1F0902BC225F15E2003D7C8D /* SettingsService.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		1F23CF19213E409400CDDE1F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +109,8 @@
 		1F23EB2B225E018000EA4C95 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1F0902B9225F156C003D7C8D /* Services.swift */,
+				1F0902BB225F156F003D7C8D /* Settings */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -237,12 +254,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0902BD225F15E2003D7C8D /* SettingsService.swift in Sources */,
 				1F89896921871EA300D4DD55 /* GameViewController.swift in Sources */,
 				1FA6D64E2140E5C900C2DB97 /* ArithmiticActions.swift in Sources */,
 				1F89896D21871FB800D4DD55 /* CollectionViewCell.swift in Sources */,
 				1FE4CCF82189BFC3008D5A76 /* ProgramSettings.swift in Sources */,
 				1FA073832188C47600DE2194 /* CollectionViewSettingssCell.swift in Sources */,
+				1F0902BA225F156C003D7C8D /* Services.swift in Sources */,
 				1F89896B21871EC100D4DD55 /* SettingsViewController.swift in Sources */,
+				1F0902BF225F1602003D7C8D /* SettingsServiceProtocol.swift in Sources */,
 				1F23CF26213E409400CDDE1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
