@@ -10,6 +10,7 @@
 		1F0902BA225F156C003D7C8D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902B9225F156C003D7C8D /* Services.swift */; };
 		1F0902BD225F15E2003D7C8D /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902BC225F15E2003D7C8D /* SettingsService.swift */; };
 		1F0902BF225F1602003D7C8D /* SettingsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902BE225F1602003D7C8D /* SettingsServiceProtocol.swift */; };
+		1F0902C3225F6EF6003D7C8D /* Bundle+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0902C2225F6EF6003D7C8D /* Bundle+Info.swift */; };
 		1F23CF26213E409400CDDE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F23CF25213E409400CDDE1F /* AppDelegate.swift */; };
 		1F23CF2B213E409400CDDE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F23CF29213E409400CDDE1F /* Main.storyboard */; };
 		1F23CF2D213E409800CDDE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F23CF2C213E409800CDDE1F /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		1F0902B9225F156C003D7C8D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		1F0902BC225F15E2003D7C8D /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
 		1F0902BE225F1602003D7C8D /* SettingsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsServiceProtocol.swift; sourceTree = "<group>"; };
+		1F0902C2225F6EF6003D7C8D /* Bundle+Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
 		1F23CF22213E409400CDDE1F /* Mathematician.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mathematician.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F23CF25213E409400CDDE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F23CF2A213E409400CDDE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,22 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		1F0902C0225F6EE2003D7C8D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1F0902C1225F6EEA003D7C8D /* Extension */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1F0902C1225F6EEA003D7C8D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1F0902C2225F6EF6003D7C8D /* Bundle+Info.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1F23CF19213E409400CDDE1F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,7 @@
 			children = (
 				1F23CF25213E409400CDDE1F /* AppDelegate.swift */,
 				1F23EB29225E015F00EA4C95 /* BusinessLogic */,
+				1F0902C0225F6EE2003D7C8D /* Core */,
 				1F23EB2C225E01A400EA4C95 /* Presentation */,
 				1F23EB2F225E021900EA4C95 /* Resources */,
 				1F23CF31213E409800CDDE1F /* Info.plist */,
@@ -263,6 +282,7 @@
 				1F0902BA225F156C003D7C8D /* Services.swift in Sources */,
 				1F89896B21871EC100D4DD55 /* SettingsViewController.swift in Sources */,
 				1F0902BF225F1602003D7C8D /* SettingsServiceProtocol.swift in Sources */,
+				1F0902C3225F6EF6003D7C8D /* Bundle+Info.swift in Sources */,
 				1F23CF26213E409400CDDE1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

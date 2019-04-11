@@ -133,8 +133,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         } else {
             let identifire = NSStringFromClass(CollectionViewCell.self)
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifire,
-                                                          for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifire, for: indexPath)
                 as! CollectionViewCell // swiftlint:disable:this force_cast
             cell.label.text = buttonsLabels[indexPath.row]
             cell.layer.cornerRadius = 10
@@ -189,7 +188,7 @@ extension GameViewController: UIViewControllerTransitioningDelegate {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsViewController = segue.destination as? SettingsViewController else {
-            let allert = UIAlertController(title: "Attention!",
+            let allert = UIAlertController(title: Bundle.main.appName,
                                            message: "The VC which we go is unreserved",
                                            preferredStyle: .alert)
             allert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

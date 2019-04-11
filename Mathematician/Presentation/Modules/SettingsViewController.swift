@@ -51,7 +51,7 @@ final class SettingsViewController: UIViewController {
             (useSubstractionSwitch.isOn || useMultiplicationSwitch.isOn || useAdditionSwitch.isOn) {
             programSettings.useDivision = sender.isOn
         } else {
-            let allertController = UIAlertController(title: "Atantion!",
+            let allertController = UIAlertController(title: Bundle.main.appName,
                                                      message: "At least one action must be enabled.",
                                                      preferredStyle: .alert)
             allertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
